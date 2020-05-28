@@ -1,35 +1,51 @@
 {
-    "private": true,
-    "scripts": {
-        "deploy": "gh-pages -d dist",
-        "dev": "npm run development",
-        "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-        "watch": "npm run development -- --watch",
-        "watch-poll": "npm run watch -- --watch-poll",
-        "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
-        "prod": "npm run production",
-        "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
-    },
-    "devDependencies": {
-        "axios": "^0.18",
-        "bootstrap": "^4.0.0",
-        "cross-env": "^5.1",
-        "jquery": "^3.2",
-        "laravel-mix": "^4.0.7",
-        "lodash": "^4.17.5",
-        "popper.js": "^1.12",
-        "resolve-url-loader": "^2.3.1",
-        "sass": "^1.15.2",
-        "sass-loader": "^7.1.0",
-        "vue": "^2.5.17",
-        "vue-template-compiler": "^2.5.21"
-    },
-    "dependencies": {
-        "gh-pages": "^2.2.0",
-        "laravel-echo": "^1.5.2",
-        "pusher-js": "^4.3.1",
-        "vue-chat-scroll": "^1.3.5",
-        "vue-moment": "^4.1.0"
-    },
-    "homepage": "https://github.com/madly0894/laravel-chat"
+  "private": true,
+  "scripts": {
+    "deploy": "gh-pages -d dist",
+    "dev": "npm run development",
+    "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch": "npm run development -- --watch",
+    "watch-poll": "npm run watch -- --watch-poll",
+    "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "prod": "npm run production",
+    "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
+  },
+  "devDependencies": {
+    "axios": "^0.18",
+    "bootstrap": "^4.0.0",
+    "cross-env": "^5.1",
+    "jquery": "^3.2",
+    "laravel-mix": "^4.0.7",
+    "lodash": "^4.17.5",
+    "popper.js": "^1.12",
+    "resolve-url-loader": "^2.3.1",
+    "sass": "^1.15.2",
+    "sass-loader": "^7.1.0",
+    "vue": "^2.5.17",
+    "vue-template-compiler": "^2.5.21"
+  },
+  "dependencies": {
+    "gh-pages": "^2.2.0",
+    "laravel-echo": "^1.5.2",
+    "pusher-js": "^4.3.1",
+    "vue-chat-scroll": "^1.3.5",
+    "vue-moment": "^4.1.0"
+  },
+  "homepage": "https://github.com/madly0894/laravel-chat",
+  "name": "websocket-chat",
+  "description": "1. Clone this repository 2. `composer install` 3. `npm install` or `yarn install` 4. make a copy of `.env.example` and rename to `.env` 5. Create and setup pusher account    ````    login to https://pusher.com/ and create new app    put pusher settings to .env file 6. in `.env` file       ````            BROADCAST_DRIVER=pusher         PUSHER_APP_ID=your_ID         PUSHER_APP_KEY=your_key         PUSHER_APP_SECRET=your_secret         PUSHER_APP_CLUSTER=your_cluster 5. database name `laravel-chat` in `.env` file 6. `php artisan migrate` 7. `php artisan key:generate` 8. `php artisan serve` 9. `php artisan websockets:serve`",
+  "version": "1.0.0",
+  "main": "webpack.mix.js",
+  "directories": {
+    "test": "tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/madly0894/laravel-chat.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/madly0894/laravel-chat/issues"
+  }
 }
